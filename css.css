@@ -1,0 +1,61 @@
+@keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  .hover\:animate-spin-slow:hover {
+    /* รอ 1 วินาที ก่อนเริ่มหมุน */
+    animation-delay: 1s;
+    /* หมุนช้าๆ ใช้เวลา 3.5 */
+    animation: spin-slow 3.5s linear infinite;
+}
+
+nav {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.692); 
+}
+
+
+ul {
+  display: flex;
+  flex-wrap: nowrap; /* ไม่ให้ขึ้นแถวใหม่ */
+  justify-content: space-between; /* กระจายไอเท็มให้เท่ากัน */
+  padding: 0; /* ลบ Padding เริ่มต้น */
+  margin-top: 5px; /* ลบ Margin เริ่มต้น */
+  list-style: none; /* ลบจุดนำหน้ารายการ */
+  gap: 0.5rem; /* ระยะห่างระหว่างไอเท็ม */
+}
+
+li {
+  /* flex-shrink: 1;  */
+  /* flex-grow: 1;  */
+  text-align: center; /* จัดข้อความให้อยู่ตรงกลาง */
+  text-decoration: underline;
+}
+
+a {
+  display: block; /* ให้ลิงก์ใช้พื้นที่เต็มของรายการ */
+  text-decoration: none; /* ลบเส้นใต้ */
+  color: inherit; /* ใช้สีของข้อความตามค่าเริ่มต้น */
+  padding: 0.5rem; /* เพิ่มระยะ Padding ให้ลิงก์ */
+  white-space: nowrap; /* ป้องกันข้อความในลิงก์ตัดบรรทัด */
+  overflow: hidden; /* ซ่อนข้อความส่วนเกิน */
+  text-overflow: ellipsis; /* เพิ่ม ... เมื่อข้อความล้น */
+}
+
+.text-name{
+  margin-top: 5px;
+}
+
+
+.topic {
+  color: #000 ; 
+  /* text-shadow:  #fff ;  */
+  text-shadow: 2px 2px 4px #fff, -2px -2px 4px #fff, 0 0 25px #fff; /* ขอบสีขาวที่หนาขึ้น */
+
+  /* color: #fff ;  */
+  /* text-shadow:  #000 ;  */
+}
+

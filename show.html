@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Flowbite -->
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <!-- Line LIFF SDK -->
+    <script charset="utf-8" src="https://static.line-scdn.net/liff/edge/versions/2.22.3/sdk.js"></script>
+    <!-- CSS Files -->
+    <link href="css.css" rel="stylesheet" />
+    <!-- Boxicons Icon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- jQuery -->
+    <!-- <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> -->
+
+</head>
+
+<body>
+    <div class="page pb-5 mb-5">
+
+        <!-- Start Navbar -->
+        <div class="navbar">
+
+            <!-- HEADER -->
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="https://cdn.glitch.global/17fa2b9c-2dc7-414d-ad60-0f5f7e7652fb/ambulance.webp?v=1736673545022"
+                    class="h-8" alt="Logo" />
+                <span class="self-center text-3xl font-semibold whitespace-nowrap text-gray-900">มูลนิธิกู้ภัย
+                    ตำบลป่างิ้ว</span>
+            </a>
+            <!-- HEADER -->
+
+            <!-- FOOTER -->
+            <div
+                class="fixed z-50 w-full h-16 max-w-lg -translate-x-1/2 bg-white border border-gray-900 rounded-full bottom-4 left-1/2 dark:bg-gray-200 dark:border-gray-900">
+                <div class="grid h-full max-w-lg grid-cols-3 mx-auto">
+                    <button data-tooltip-target="tooltip-home" type="button" onclick="window.location.href='index.html'"
+                        class="inline-flex flex-col items-center justify-center px-5 rounded-s-full hover:bg-gray-50 dark:hover:bg-red-600 group">
+                        <svg class="w-5 h-5 mb-1 text-gray-900 dark:text-gray-900 group-hover:text-gray-100 dark:group-hover:text-gray-100"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="m19.707 9.293-2-2-7-7a1 1 0 0 0-1.414 0l-7 7-2 2a1 1 0 0 0 1.414 1.414L2 10.414V18a2 2 0 0 0 2 2h3a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h3a2 2 0 0 0 2-2v-7.586l.293.293a1 1 0 0 0 1.414-1.414Z" />
+                        </svg>
+                        <span class="sr-only">หน้าแรก</span>
+                    </button>
+                    <div id="tooltip-home" role="tooltip"
+                        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        หน้าแรก
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                    <div class="flex items-center justify-center">
+                        <button data-tooltip-target="tooltip-new" type="button" id="sos"
+                            onclick="window.location.href='sos.html'"
+                            class="inline-flex items-center justify-center !w-14 !h-14 font-extrabold bg-red-600 rounded-full hover:bg-red-900 group focus:ring-4 focus:ring-red-300 focus:outline-none dark:focus:ring-red-800">
+                            <div class="text-gray-100">
+                                SOS
+                            </div>
+                            <span class="sr-only">ขอความช่วยเหลือ</span>
+                        </button>
+                    </div>
+                    <div id="tooltip-new" role="tooltip"
+                        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        ขอความช่วยเหลือ
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+
+                    <button data-tooltip-target="tooltip-profile" type="button" onclick="scrollProfile()"
+                        class="inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:bg-gray-50 dark:hover:bg-red-600 group">
+                        <svg class="w-5 h-5 mb-1 text-gray-900 dark:text-gray-900 group-hover:text-gray-100 dark:group-hover:text-gray-100"
+                            aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M10 0a10 10 0 1 0 10 10A10.011 10.011 0 0 0 10 0Zm0 5a3 3 0 1 1 0 6 3 3 0 0 1 0-6Zm0 13a8.949 8.949 0 0 1-4.951-1.488A3.987 3.987 0 0 1 9 13h2a3.987 3.987 0 0 1 3.951 3.512A8.949 8.949 0 0 1 10 18Z" />
+                        </svg>
+                        <span class="sr-only">ข้อมูลกู้ภัยตำบลป่างิ้ว</span>
+                    </button>
+                    <div id="tooltip-profile" role="tooltip"
+                        class="absolute z-10 invisible inline-block px-3 py-2 text-sm font-medium text-white transition-opacity duration-300 bg-gray-900 rounded-lg shadow-sm opacity-0 tooltip dark:bg-gray-700">
+                        ข้อมูลกู้ภัยตำบลป่างิ้ว
+                        <div class="tooltip-arrow" data-popper-arrow></div>
+                    </div>
+                </div>
+            </div>
+            <!-- FOOTER -->
+
+        </div>
+        <!-- End Navbar -->
+
+
+        <!-- Start Form -->
+        <div class="mx-5 my-2 bg-gray-400 border-2 border-gray-600 rounded-full p-4 overflow-hidden">
+            <br />
+            <br />
+            <br />
+            <div class="text-center mt-5">
+                <h3 class="text-4xl  dark:text-gray-900 font-extrabold topic underline">แบบฟอร์ม<br>ขอความช่วยเหลือ</h3>
+            </div>
+            <br />
+
+            <div class="text-center" >
+                <span id="status" class="text-sm font-medium me-2 px-2.5 py-0.5 rounded-sm "></span>
+            </div>
+
+            <form class="mt-5" id="form_sos">
+                <div class="grid gap-6 mb-6 md:grid-cols-2">
+                    <div id="no" class="block text-base font-medium topic"></div>
+                    <input type="text" id="id" style="display: none;"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            readonly />
+                    <div>
+                        <label for="name" class="block mb-2 text-base font-medium topic">ชื่อผู้แจ้งเหตุ *</label>
+                        <input type="text" id="name"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            required />
+                    </div>
+                    <div>
+                        <label for="phone" class="block mb-2 text-base font-medium topic">เบอร์โทรติดต่อ *</label>
+                        <input type="tel" id="phone"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="xxx-xxx-xxxx" pattern="\d{3}-\d{3}-\d{4}" oninput="formatPhone(this)" 0
+                            oninvalid="this.setCustomValidity('กรุณาแจ้งเบอร์โทร');"
+                            oninput="this.setCustomValidity('');" required maxlength="13" />
+                    </div>
+                    <div>
+                        <label for="accident" class="block mb-2 text-base font-medium topic">สาเหตุ/อาการบาดเจ็บ
+                            *</label>
+                        <input type="text" id="accident"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="ระบุอุบัติเหตุ"
+                            oninvalid="this.setCustomValidity('กรุณาแจ้งสาเหตุ/อุบัติเหตุ');"
+                            oninput="this.setCustomValidity('');" required />
+                    </div>
+                </div>
+
+                <div class="mb-6">
+                    <!-- บ้านเลขที่ อาคาร ชั้น หมู่บ้าน หมู่ที่ ตรอก ซอย ถนน ตำบล อำเภอ จังหวัด -->
+                    <label for="location" class="block mb-2 text-base font-medium topic">สถานที่ที่ต้องการความช่วยเหลือ
+                        *</label>
+
+                    <div class="grid grid-cols-2 gap-1">
+                        <!-- บ้านเลขที่  -->
+                        <input type="text" id="house_number"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="บ้านเลขที่" />
+                        <!-- อาคาร  -->
+                        <input type="text" id="building"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="อาคาร" />
+                        <!-- ชั้น  -->
+                        <input type="text" id="floor"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="ชั้น" />
+                        <!-- หมู่บ้าน  -->
+                        <input type="text" id="village"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="หมู่บ้าน" />
+                        <!-- ตรอก/ซอย  -->
+                        <input type="text" id="alley"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="ตรอก/ซอย" />
+                        <!-- ถนน  -->
+                        <input type="text" id="road"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="ถนน" />
+                        <!-- ตำบล  -->
+                        <input type="text" id="subdistrict"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="ตำบล" />
+                        <!-- อำเภอ  -->
+                        <input type="text" id="district"
+                            class="bg-gray-800 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-800 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                            placeholder="อำเภอ" />
+                    </div>
+
+                    <!-- textarea -->
+                    <div
+                        class="mt-1 w-full mb-4 border border-gray-200 rounded-lg bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
+
+                        <div class="px-4 py-2 bg-white rounded-t-lg dark:bg-gray-800">
+                            <textarea id="description" rows="3"
+                                class="w-full px-0 text-sm text-gray-900 bg-white border-0 dark:bg-gray-800 focus:ring-0 dark:text-white dark:placeholder-gray-400"
+                                placeholder="ระบุสถานที่เพิ่มเติมหรือลักษณะเด่นของที่พักอาศัย เช่น บ้านสีขาว ,หลังคาสีดำ ,รั้วเหล็กสีเขียว ,ประตูสีแดง ฯ"></textarea>
+                        </div>
+                    </div>
+                </div>
+
+
+                <button onclick="updateInput(event)"
+                    class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">บันทึกข้อมูล</button>
+
+                <button onclick="goBack()" id="canceled"
+                    class="my-5 text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">
+                    ย้อนกลับ
+                </button>
+
+            </form>
+
+
+            <br /><br /><br /><br /><br /><br /><br />
+        </div>
+
+        <!-- End Form -->
+
+    </div>
+
+    <script src="script.js?version=1.5"></script>
+
+</body>
+
+</html>
