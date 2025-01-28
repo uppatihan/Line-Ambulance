@@ -3,7 +3,8 @@ var pathname = window.location.pathname;
 // ใช้ split() เพื่อแยกชื่อไฟล์ออกจาก path
 var filename = pathname.split('/').pop();
 // ตัดชื่อไฟล์ออก โดยใช้ slice เพื่อเอาส่วนที่ไม่รวมชื่อไฟล์
-var Path = "http://localhost/Line-Ambulance/";
+// var Path = "http://localhost/Line-Ambulance/";
+var Path = "https://uppatihan.github.io/Line-Ambulance/";
 
 document.addEventListener("DOMContentLoaded", function () {
     console.log("running default script");
